@@ -9,6 +9,10 @@
   --color-sub-dark: #242424;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-mona);
 }
