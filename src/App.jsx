@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
@@ -12,22 +12,24 @@ import Brand from './components/Brand';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTop from './components/ScrollTop';
-import Loading from './components/Loading';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+
   useGSAP(() => {
     const ctx = gsap.context(() => {
       gsap.from('.nav', { y: -100, duration: 1, opacity: 0 });
       gsap.from('.top-title', { x: -200, duration: 1, opacity: 0 });
-      gsap.from('.center-title', { x: -300, duration: 1, opacity: 0 });
-      gsap.from('.bottom-title', { x: -400, duration: 1, opacity: 0 });
+      gsap.from('.center-title', {
+        x: -300,
+        duration: 1,
+        opacity: 0,
+      });
+      gsap.from('.bottom-title', {
+        x: -400,
+        duration: 1,
+        opacity: 0,
+      });
       gsap.from('.hero-p', { x: -500, duration: 1, opacity: 0 });
       gsap.from('.hero-button', { x: -500, duration: 1, opacity: 0 });
       gsap.from('.hero-img', { x: 200, duration: 1, opacity: 0 });
@@ -37,27 +39,21 @@ const App = () => {
 
   return (
     <>
-      {loading ? (
-        <Loading loading={loading} />
-      ) : (
-        <>
-          <header className="  relative ">
-            <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-          </header>
-          <main className="relative z-20 bg-dark h-full">
-            <Hero />
-            <WhatWeDo />
-            <Services />
-            <AboutUs />
-            <OurWorks />
-            <Brand />
-            <ClientReview />
-            <SendEmail />
-            <Footers />
-            <ScrollTop />
-          </main>
-        </>
-      )}
+      <header className="  relative ">
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      </header>
+      <main className="relative z-20 bg-dark h-full">
+        <Hero />
+        <WhatWeDo />
+        <Services />
+        <AboutUs />
+        <OurWorks />
+        <Brand />
+        <ClientReview />
+        <SendEmail />
+        <Footers />
+        <ScrollTop />
+      </main>
     </>
   );
 };

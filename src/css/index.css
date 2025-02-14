@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  @apply font-josefin;
+  @apply font-josefin w-full overflow-x-hidden;
 }
 
 section {

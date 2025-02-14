@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="flex-1 hidden md:flex items-center justify-center md:justify-end  ">
             <img
               src={hero}
-              className="scale-x-[-1] h-96 md:-mr-7 hero-img"
+              className="  !scale-x-[-1]  h-96 md:-mr-7 hero-img"
               alt=""
             />
           </div>
