@@ -3,15 +3,18 @@ import { socialLink } from '../constant/navNeed';
 
 const Footers = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 ">
+    <footer className="bg-dark  ">
       <div className="max-w-screen-lg mx-auto px-6 ">
-        <div className=" flex flex-col md:flex-row items-center sm:justify-between py-10">
+        <div className=" flex text-gray-400 flex-col md:flex-row items-center sm:justify-between py-10">
           <p>© 2025 Assister. All rights reserved.</p>
-
           <div className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             {socialLink.map((item, index) => (
-              <a href={item.link} key={index}>
-                <FontAwesomeIcon icon={item.icon} className="text-gray-500 text-xl" />
+              <a
+                href={item.link}
+                key={index}
+                className="hover:text-highlight duration-300 hover:scale-125 text-xl "
+              >
+                <FontAwesomeIcon icon={item.icon} />
               </a>
             ))}
           </div>

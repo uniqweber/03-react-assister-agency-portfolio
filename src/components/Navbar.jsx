@@ -2,23 +2,8 @@ import { faGripLines, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavRow, navItem, socialLink } from '../constant/navNeed';
 import logo from '../assets/images/assister-logo.png';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 
 const Navbar = ({ isOpen, setIsOpen }) => {
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.nav', {
-        y: -100,
-        duration: 1,
-        opacity: 0,
-        ease: 'power2.out',
-      });
-    });
-
-    return () => ctx.revert(); // Cleanup when component unmounts
-  });
-
   return (
     <nav
       className={`bg-dark duration-700 text-white ${
@@ -37,13 +22,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           </h2>
         </div>
         <div className="flex items-center gap-6 ">
-          <button
-            className={`  px-5 py-1.5 rounded-full font-semibold duration-700 cursor-pointer ${
+          <a
+            href="#contact"
+            className={`inline-block  px-5 py-1.5 rounded-full font-semibold duration-700 cursor-pointer ${
               isOpen ? 'bg-white text-light-dark' : 'bg-dark text-white'
             }`}
           >
             Contact us
-          </button>
+          </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={` text-2xl size-9 flex items-center justify-center   cursor-pointer rounded-full duration-700 ${
@@ -102,7 +88,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               </h2>
               <div className="flex items-center gap-6 text-2xl">
                 {socialLink.map((item, index) => (
-                  <FontAwesomeIcon key={index} icon={item.icon} />
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    key={index}
+                    className="hover:text-highlight duration-300 hover:scale-125"
+                  >
+                    <FontAwesomeIcon icon={item.icon} />
+                  </a>
                 ))}
               </div>
             </div>

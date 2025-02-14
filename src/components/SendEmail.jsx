@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SendEmail = () => {
   return (
-    <section className="bg-dark py-24">
+    <div id="contact" className="bg-dark pt-24 pb-12">
       <div className="max-w-screen-lg mx-auto px-6">
         <div className="bg-light-dark border-2 border-neutral-800 p-6 md:p-10 grid gap-10 md:grid-cols-2 ">
           <div className="md:pr-14 ">
@@ -40,7 +40,7 @@ const SendEmail = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -10,14 +10,22 @@
   --font-dm: 'DM Sans', 'serif';
   --font-mona: 'Mona Sans', sans-serif;
   --font-josefin: 'Josefin Sans', 'serif';
-  --color-highlight: #FFB118;
+  --color-highlight: #ffb118;
   --color-dark: #0a0a0a;
   --color-light-dark: #171717;
   --color-sub-dark: #242424;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply scroll-smooth font-josefin;
+  @apply font-josefin;
+}
+
+section {
+  @apply scroll-mt-[780px] md:scroll-mt-[600px];
 }
 
 .animate-slide {

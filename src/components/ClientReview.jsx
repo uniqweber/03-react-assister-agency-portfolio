@@ -32,9 +32,9 @@ const ClientReview = () => {
   }, []);
 
   return (
-    <section className="bg-white py-20">
+    <div id="review" className="bg-white py-20">
       <div className="max-w-screen-lg px-6  mx-auto  ">
-        <div className=" flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
+        <div className=" flex flex-col md:flex-row items-center justify-center gap-6 ">
           <div
             onClick={() => handleReview('left')}
             className="bg-highlight  cursor-pointer w-10 h-10 rounded-full  items-center justify-center text-white flex-shrink-0 hidden md:flex"
@@ -48,7 +48,7 @@ const ClientReview = () => {
                   transform: `translateX(-${currentReview * 100}%)`,
                 }}
                 key={index}
-                className="w-full  duration-1000 flex-shrink-0 text-center  rounded-lg py-5 px-10"
+                className="w-full  duration-1000 flex-shrink-0 text-center  rounded-lg py-5 md:px-10 px-2"
               >
                 <FontAwesomeIcon
                   icon={faQuoteLeft}
@@ -86,7 +86,7 @@ const ClientReview = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

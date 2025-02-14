@@ -1,9 +1,9 @@
 import { SectionTitle } from '../constant/shared';
-import imgOne from '../assets/images/team/aboutus.jpg';
+
 
 const WhatWeDo = () => {
   return (
-    <section id='our-process' className="bg-dark">
+    <section id="our-process" className="bg-dark">
       <div
         className=" max-w-screen-lg mx-auto py-20 px-6
          "
@@ -19,7 +19,7 @@ const WhatWeDo = () => {
         <div className="sm:columns-2 gap-6 mt-10 space-y-6">
           <div className="   overflow-hidden  ">
             <img
-              src={imgOne}
+              src="https://i.ibb.co.com/8nT2hz8r/aboutus.jpg"
               alt="About Us"
               className="w-full  h-full object-cover mt-2 opacity-80"
             />

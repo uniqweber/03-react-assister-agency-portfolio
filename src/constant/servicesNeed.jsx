@@ -1,15 +1,15 @@
-import code from '../assets/images/code.png';
-import ecommerce from '../assets/images/ecommarce.png';
-import graphic from '../assets/images/graphic.png';
-import video from '../assets/images/video.png';
-import social from '../assets/images/social.png';
+const social= "https://i.ibb.co.com/3Yz4VLxx/social.png"
+const graphic= "https://i.ibb.co.com/fdMKgXQs/graphic.png"
+const ecommarce= "https://i.ibb.co.com/fzMyfTyF/ecommarce.png"
+const video= "https://i.ibb.co.com/jPbKCy86/video.png"
+const code= "https://i.ibb.co.com/zVMrsFHT/code.png"
 
 export const servicesNeed = [
   {
     title: 'E-commerce support ',
     description:
       'Our e-commerce support services are tailored to empower businesses in the competitive online marketplace. We assist with everything from platform setup and inventory management to payment processing, ensuring a seamless shopping experience for your customers. Our dedicated team also crafts effective marketing strategies to drive traffic and increase sales. With our expertise, you can focus on growing your business while we handle the technical aspects, ensuring customer satisfaction and loyalty throughout the entire process. Let us help you thrive in the digital landscape.',
-    icon: ecommerce,
+    icon: ecommarce,
   },
   {
     title: 'Social media management ',

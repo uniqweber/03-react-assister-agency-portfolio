@@ -1,9 +1,4 @@
-export const NavRow = ({
-  navItem = [],
-  sliceStart,
-  sliceEnd,
-  setIsOpen,
-}) => {
+export const NavRow = ({ navItem = [], sliceStart, sliceEnd, setIsOpen }) => {
   return (
     <div className="grid md:grid-cols-2 max-w-screen-lg mx-auto px-6 text-2xl md:text-4xl capitalize font-medium">
       {navItem.slice(sliceStart, sliceEnd).map((service, index) => (
@@ -43,18 +38,18 @@ import {
 export const socialLink = [
   {
     icon: faFacebook,
-    link: '',
+    link: 'https://facebook.com',
   },
   {
     icon: faLinkedin,
-    link: '',
+    link: 'https://linkedin.com',
   },
   {
     icon: faTwitter,
-    link: '',
+    link: 'https://twitter.com',
   },
   {
     icon: faGithub,
-    link: '',
+    link: 'https://github.com',
   },
 ];

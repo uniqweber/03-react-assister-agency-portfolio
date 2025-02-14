@@ -1,6 +1,6 @@
-import imgOne from '../assets/images/team/our-office.jpg';
-import imgTwo from '../assets/images/team/philoshopy.jpg';
-import imgThree from '../assets/images/team/teamwork.jpg';
+const imgOne = 'https://i.ibb.co.com/bS8qsyH/our-office.jpg';
+const imgTwo = 'https://i.ibb.co.com/kg8dZ9bP/philoshopy.jpg';
+const imgThree = 'https://i.ibb.co.com/yF5BsfR0/teamwork.jpg';
 
 export const aboutUsNeed = {
   bottom: [
