@@ -3,7 +3,7 @@ import { SectionTitle } from '../constant/shared';
 
 const Services = () => {
   return (
-    <section className="bg-white">
+    <section id='our-services' className="bg-white">
       <div className="  py-20 ">
         <div
           className=" max-w-screen-lg mx-auto  px-6 

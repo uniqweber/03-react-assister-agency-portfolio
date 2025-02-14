@@ -1,31 +1,42 @@
-import {
-  faBacon,
-  faBars,
-  faGripLines,
-  faXmark,
-} from '@fortawesome/free-solid-svg-icons';
+import { faGripLines, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavRow, navItem, socialLink } from '../constant/navNeed';
+import logo from '../assets/images/assister-logo.png';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Navbar = ({ isOpen, setIsOpen }) => {
+  useGSAP(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.nav', {
+        y: -100,
+        duration: 1,
+        opacity: 0,
+        ease: 'power2.out',
+      });
+    });
+
+    return () => ctx.revert(); // Cleanup when component unmounts
+  });
+
   return (
     <nav
       className={`bg-dark duration-700 text-white ${
-        isOpen ? 'h-[95vh] md:h-[64vh] lg:h-[85vh] 2xl:h-[65vh] ' : 'h-0 lg:h-2 '
+        isOpen ? 'h-[95vh] md:h-[64vh] lg:h-[85vh] 2xl:h-[65vh] ' : 'h-0  '
       }`}
     >
-      <div className="flex justify-between items-center relative max-w-screen-lg z-50 mx-auto px-6  py-6 md:py-10">
+      <div className="flex justify-between items-center relative max-w-screen-lg z-50 mx-auto px-6  py-6 md:py-10 nav">
         <div
-          className={`${
+          className={`flex items-center gap-2 logo ${
             isOpen ? 'text-white' : 'text-light-dark'
-          } duration-700 flex items-center gap-3`}
+          } duration-700 `}
         >
-          <FontAwesomeIcon icon={faBacon} className="text-2xl" />
-          <h2 className="text-2xl hidden sm:block font-semibold tracking-wide -mt-0.5">
-            assister.
+          <img src={logo} alt="" className="h-10 " />
+          <h2 className="text-2xl hidden sm:block   tracking-wide pt-1">
+            Assister.
           </h2>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 ">
           <button
             className={`  px-5 py-1.5 rounded-full font-semibold duration-700 cursor-pointer ${
               isOpen ? 'bg-white text-light-dark' : 'bg-dark text-white'
@@ -35,7 +46,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={` text-2xl size-9   cursor-pointer rounded-full duration-700 ${
+            className={` text-2xl size-9 flex items-center justify-center   cursor-pointer rounded-full duration-700 ${
               isOpen
                 ? ' text-white bg-light-dark hover:bg-white/10'
                 : ' text-light-dark bg-light-dark/10 hover:bg-light-dark/20 '
@@ -50,11 +61,21 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </div>
       </div>
       <div className={`${isOpen ? 'opacity-100' : 'opacity-0'} duration-700`}>
-        <div onClick={() => setIsOpen(false)} className="border-y border-light-dark relative">
-          <NavRow navItem={navItem} sliceStart={0} sliceEnd={2} />
+        <div className="border-y border-light-dark relative">
+          <NavRow
+            setIsOpen={setIsOpen}
+            navItem={navItem}
+            sliceStart={0}
+            sliceEnd={2}
+          />
         </div>
-        <div onClick={() => setIsOpen(false)} className="border-b border-light-dark relative">
-          <NavRow navItem={navItem} sliceStart={2} sliceEnd={4} />
+        <div className="border-b border-light-dark relative">
+          <NavRow
+            setIsOpen={setIsOpen}
+            navItem={navItem}
+            sliceStart={2}
+            sliceEnd={4}
+          />
         </div>
         <div className="max-w-screen-lg mx-auto px-6  py-6 md:py-10">
           <div className="grid grid-cols-1 gap-8  lg:grid-cols-2 ">

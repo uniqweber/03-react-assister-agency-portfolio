@@ -3,7 +3,7 @@ import imgOne from '../assets/images/team/aboutus.jpg';
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-dark">
+    <section id='our-process' className="bg-dark">
       <div
         className=" max-w-screen-lg mx-auto py-20 px-6
          "

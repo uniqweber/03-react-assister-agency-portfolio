@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import 'tailwindcss';
 
 @theme {
+  --font-montserrat: 'Montserrat', 'serif';
+  --font-dm: 'DM Sans', 'serif';
   --font-mona: 'Mona Sans', sans-serif;
-  --color-highlight: #ff6600;
+  --font-josefin: 'Josefin Sans', 'serif';
+  --color-highlight: #FFB118;
   --color-dark: #0a0a0a;
   --color-light-dark: #171717;
   --color-sub-dark: #242424;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: var(--font-mona);
+  @apply scroll-smooth font-josefin;
 }
 
 .animate-slide {

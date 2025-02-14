@@ -5,7 +5,7 @@ const Footers = () => {
   return (
     <footer className="bg-white border-t border-gray-200 ">
       <div className="max-w-screen-lg mx-auto px-6 ">
-        <div className="  sm:flex sm:items-center sm:justify-between py-10">
+        <div className=" flex flex-col md:flex-row items-center sm:justify-between py-10">
           <p>© 2025 Assister. All rights reserved.</p>
 
           <div className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">

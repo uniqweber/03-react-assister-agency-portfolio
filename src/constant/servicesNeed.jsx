@@ -1,5 +1,4 @@
 import code from '../assets/images/code.png';
-import data from '../assets/images/data.png';
 import ecommerce from '../assets/images/ecommarce.png';
 import graphic from '../assets/images/graphic.png';
 import video from '../assets/images/video.png';

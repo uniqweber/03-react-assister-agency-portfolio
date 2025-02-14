@@ -1,9 +1,9 @@
 import { SectionTitle } from '../constant/shared';
-import { aboutUsNeed } from '../constant/aboutUsNeed'; 
+import { aboutUsNeed } from '../constant/aboutUsNeed';
 
 const AboutUs = () => {
   return (
-    <section className="bg-dark">
+    <section id="about-us" className="bg-dark">
       <div className=" max-w-screen-lg mx-auto  px-6 py-20">
         <SectionTitle
           smallText="know"
@@ -27,8 +27,10 @@ const AboutUs = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-80"
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-500 flex flex-col items-start justify-end p-4">
-                <h2 className="text-white text-xl font-medium ">{item.title}</h2>
-                <h2 className="text-white text-sm font-thin">{item.subTitle}</h2>
+                <h2 className="text-white text-xl font-medium ">
+                  {item.title}
+                </h2>
+                <h2 className="text-white text-sm  ">{item.subTitle}</h2>
               </div>
             </div>
           ))}
