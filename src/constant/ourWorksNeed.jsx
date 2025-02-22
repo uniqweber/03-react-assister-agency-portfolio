@@ -1,5 +1,8 @@
+import img5 from '../assets/images/amazon.webp';
+import img6 from '../assets/images/project.jpg';
+import img7 from '../assets/images/shopify.jpg';
+
 const imgTwo = 'https://i.ibb.co.com/hRtSKsGJ/graphics.webp';
-const imgThree = 'https://i.ibb.co.com/0jhd7cH7/video.png';
 const imgOne = 'https://i.ibb.co.com/1Y5q4RtK/web.jpg';
 
 export const projects = [
@@ -13,9 +16,20 @@ export const projects = [
     subtitle: 'Innovative designs that inspire, engage, and elevate your brand',
     img: imgTwo,
   },
+
   {
-    title: 'Video Production ',
+    title: 'Video Editing ',
     subtitle: 'Dynamic videos that tell your story with creativity and passion',
-    img: imgThree,
+    img: img6,
+  },
+  {
+    title: 'Amazon',
+    subtitle: 'Amazon clint dashboard that we developed sells number',
+    img: img5,
+  },
+  {
+    title: 'Shopify',
+    subtitle: 'Shopify clint dashboard that we developed sells number',
+    img: img7,
   },
 ];

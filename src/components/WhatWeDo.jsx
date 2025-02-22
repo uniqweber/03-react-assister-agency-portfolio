@@ -1,5 +1,5 @@
 import { SectionTitle } from '../constant/shared';
-
+import img1 from '../assets/images/img-1.jpg';
 
 const WhatWeDo = () => {
   return (
@@ -19,7 +19,7 @@ const WhatWeDo = () => {
         <div className="sm:columns-2 gap-6 mt-10 space-y-6">
           <div className="   overflow-hidden  ">
             <img
-              src="https://i.ibb.co.com/8nT2hz8r/aboutus.jpg"
+              src={img1}
               alt="About Us"
               className="w-full  h-full object-cover mt-2 opacity-80"
             />
