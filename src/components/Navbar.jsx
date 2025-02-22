@@ -17,7 +17,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           } duration-700 `}
         >
           <img src={logo} alt="" className="h-10 " />
-          <h2 className="text-2xl hidden sm:block   tracking-wide pt-1">
+          <h2 className="text-3xl hidden sm:block font-semibold  tracking-wide pt-1">
             Assister.
           </h2>
         </div>

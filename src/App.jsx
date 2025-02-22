@@ -12,6 +12,7 @@ import Brand from './components/Brand';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTop from './components/ScrollTop';
+import wp from './assets/images/whatsapp-icon.png';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +54,13 @@ const App = () => {
         <SendEmail />
         <Footers />
         <ScrollTop />
+        <a
+          target="_blank"
+          href="https://wa.me/+8801779759629"
+          className="fixed bottom-7 left-8"
+        >
+          <img src={wp} alt="" className="h-12 w-12 " />
+        </a>
       </main>
     </>
   );
