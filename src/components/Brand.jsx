@@ -23,7 +23,6 @@ const Brand = () => {
     imgFive,
     imgSix,
     imgSeven,
-
     imgNine,
     imgTen,
     imgEleven,

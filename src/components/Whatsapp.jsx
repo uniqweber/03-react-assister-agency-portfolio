@@ -2,7 +2,7 @@ import wp from '../assets/images/whatsapp-icon.png';
 
 const Whatsapp = () => {
   return (
-    <div className="fixed bottom-7 left-7 ">
+    <div className="fixed bottom-7 left-7 z-20 ">
       <a
         target="_blank"
         href="https://wa.me/+8801779759629"
