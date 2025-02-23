@@ -24,12 +24,12 @@ export const projects = [
   },
   {
     title: 'Amazon',
-    subtitle: 'Amazon clint dashboard that we developed sells number',
+    subtitle: 'Amazon client dashboard that we developed sells number',
     img: img5,
   },
   {
     title: 'Shopify',
-    subtitle: 'Shopify clint dashboard that we developed sells number',
+    subtitle: 'Shopify client dashboard that we developed sells number',
     img: img7,
   },
 ];
