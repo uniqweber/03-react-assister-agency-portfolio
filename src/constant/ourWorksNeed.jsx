@@ -1,4 +1,4 @@
-import img5 from '../assets/images/amazon.webp';
+import img5 from '../assets/images/ama.jpg';
 import img6 from '../assets/images/project.jpg';
 import img7 from '../assets/images/shopify.jpg';
 
