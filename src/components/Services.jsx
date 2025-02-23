@@ -30,7 +30,7 @@ const Services = () => {
                 <div className="flex justify-center items-center h-12 w-12 p-2 border bg-white rounded-xl border-gray-200">
                   <img src={item.icon} alt="" className="h-full w-full" />
                 </div>
-                <h2 className="text-lg font-bold text-light-dark my-2">
+                <h2 className="text-lg font-bold capitalize text-light-dark my-2">
                   {item.title}
                 </h2>
                 <p className="text-gray-500 text-sm text-j  ">{item.description}</p>     
